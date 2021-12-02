@@ -1,3 +1,4 @@
+import db from "../../../config/db";
 const Index = async (req, res) => {
     try {
 
@@ -23,21 +24,25 @@ const Index = async (req, res) => {
     }
 };
 const handleGET = async (req, res) => {
-    res.status(200).json({data: "datas"})
+    let datas = await db("boats").select()
+    res.status(200).json({data: datas})
 
 }
 const handlePOST = async (req, res) => {
     let body = await JSON.parse(req.body)
-    res.status(200).json({data: "result"})
+    const result = await db("boats").insert(body).returning('*');
+    res.status(200).json({data: result})
 }
 const handlePUT = async (req, res) => {
     let body = await JSON.parse(req.body)
-    res.status(200).json({data: "result"})
+    const result = await db("boats").update(body).where('id', body.id).returning('*');
+    res.status(200).json({data: result})
 
 }
 const handleDELETE = async (req, res) => {
     let body = await JSON.parse(req.body)
 
+    const result = await db("boats").delete().where('id', body.id);
 
     res.status(200).json({message: 'Well Deleted'})
 
