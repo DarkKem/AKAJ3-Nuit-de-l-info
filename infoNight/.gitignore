@@ -1,20 +1,19 @@
 # See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
 
 # dependencies
-/front/node_modules
-/2fa/node_modules
-/front/.pnp
-/front.pnp.js
+/node_modules
+/.pnp
+.pnp.js
 
 # testing
 /coverage
 
 # next.js
-/front/.next/
-/front/out/
+/.next/
+/out/
 
 # production
-/front/build
+/build
 
 # misc
 .DS_Store
@@ -33,7 +32,3 @@ yarn-error.log*
 
 # vercel
 .vercel
-
-# 2fa
-/2fa/.env
-
