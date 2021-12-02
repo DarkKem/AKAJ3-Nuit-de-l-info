@@ -11,7 +11,7 @@ const index = () => {
             <Link href={"/"}>
                 <a
                 className={"rounded px-4 py-2 shadow bg-gray-700 text-white transition hover:bg-gray-500 active:bg-atouLightOrange"}>Clique
-                ici pour revenir sur la page d&apos;accueil</a></Link>
+                ici pou revenir sur la page d&apos;accueil</a></Link>
 
         </div>
     );
