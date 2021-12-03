@@ -18,6 +18,14 @@ Vous pouvez scanner le QR Code de test pour essayer de vous connecter avec les i
 
 Le champs "code" sera le code généré par Google Authenticator.
 
+## Défis réalisés ( or défis obligatoire )
+
+- [PIMP YOUR APP with Data Viz]
+- [Soyez React-if !]
+- [Alerte-moi si tu peux !]
+- [Doublez votre fun avec le double de sécurité !]
+- [Captcha accessible]
+
 ## Auteurs
 
 - [MARTEL Jimmy]
@@ -33,6 +41,13 @@ Le champs "code" sera le code généré par Google Authenticator.
 [PONTY Arthur]: <https://www.linkedin.com/in/arthur-ponty/>
 [LIEHN Antonin]: <https://www.linkedin.com/in/antonin-liehn-486a56197/>
 [PELTIER Jérémy]: <https://www.linkedin.com/in/jeremy-peltier/>
+[PIMP YOUR APP with Data Viz]: <https://www.nuitdelinfo.com/inscription/defis/272>
+[Soyez React-if !]: <https://www.nuitdelinfo.com/inscription/defis/300>
+[Alerte-moi si tu peux !]: <https://www.nuitdelinfo.com/inscription/defis/297>
+[Doublez votre fun avec le double de sécurité !]: <https://www.nuitdelinfo.com/inscription/defis/303>
+[Captcha accessible]: <https://www.nuitdelinfo.com/inscription/defis/317>
+
+
 
 
 
