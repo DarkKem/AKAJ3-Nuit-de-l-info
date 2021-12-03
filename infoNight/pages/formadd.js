@@ -8,7 +8,7 @@ export default function formadd() {
      const registerUser = event => {
         event.preventDefault() 
         recaptchaRef.current.execute();
-        let request = `${server}api/backoffice`
+        let request = `${server}/api/backoffice`
         let serverRes =  fetch(request, {
             method: "POST",
             body: JSON.stringify({
