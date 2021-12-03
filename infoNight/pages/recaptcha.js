@@ -33,7 +33,7 @@ export default function Home() {
 	    ref={recaptchaRef}
 	    size="invisible"
 	    sitekey={process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY}
-        onChange={onReCAPTCHAChange}
+         onChange={onReCAPTCHAChange}
 	  />
 	  <input
 	    
