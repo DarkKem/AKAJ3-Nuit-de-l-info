@@ -128,7 +128,13 @@ main {
     border-radius: 5px;
     display: flex;
     flex-wrap: wrap;
-    overflow: hidden;
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+    color: white;
+  }
+  .divElemSearch:hover{
+    background-color: steelblue;
+
 
   }
 
@@ -212,3 +218,4 @@ form {
   }
 
 }
+
