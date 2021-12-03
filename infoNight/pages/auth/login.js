@@ -6,7 +6,8 @@ import {
     faExclamationTriangle,
     faUserTie,
     faKey,
-    faCheckCircle
+    faCheckCircle,
+    faQrcode
 } from '@fortawesome/free-solid-svg-icons'
 import Image from "next/image";
 import Router from "next/router";
@@ -15,6 +16,7 @@ import cookie from "cookie";
 const Login = () => {
     const [username, setUsername] = useState('')
     const [password, setPassword] = useState('')
+    const [qrcode, setQrcode] = useState('')
     const [messageSuccess, setMessageSuccess] = useState(false)
     const [messageError, setMessageError] = useState(false)
     const [loading, setLoading] = useState(false)
@@ -24,7 +26,7 @@ const Login = () => {
         setMessageSuccess(false)
         setLoading(true)
 
-        if (username && password) {
+        if (username && password && qrcode) {
             console.log(password)
             const resp = await fetch(`${server}/api/auth/login`, {
                 method: 'POST',
@@ -34,6 +36,7 @@ const Login = () => {
                 body: JSON.stringify({
                     username: username,
                     password: password,
+                    qrcode: qrcode,
                 })
             })
             if (resp.status.toString().includes('40')) {
@@ -71,6 +74,14 @@ const Login = () => {
             </label>
             <input type="password" id={"password"} name={"password"} placeholder="Password" value={password}
                    onChange={event => setPassword(event.target.value)}
+                   className={``}
+                   required/>
+            <label htmlFor="qrcode" className={`
+                    `}> <FontAwesomeIcon icon={faQrcode}
+                                         className={""}/>
+            </label>
+            <input type="qrcode" id={"qrcode"} name={"qrcode"} placeholder="QrCode" value={qrcode}
+                   onChange={event => setQrcode(event.target.value)}
                    className={``}
                    required/>
             {messageError &&
