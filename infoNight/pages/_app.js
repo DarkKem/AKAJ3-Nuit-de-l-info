@@ -23,6 +23,7 @@ Router.events.on('routeChangeError', () => {
 // Importing Font Awesome
 export default function MyApp({Component, pageProps}) {
 
+ 
     return (
         <Layout>
             <Component {...pageProps} />
