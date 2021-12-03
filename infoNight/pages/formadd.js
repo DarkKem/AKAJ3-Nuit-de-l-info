@@ -37,7 +37,7 @@ export default function formadd() {
             <label htmlFor="titre">Titre</label>
             <input name="titre" id="titre" type="text" autoComplete="Titre..." required />
             <label htmlFor="Contenu">Contenu</label>
-            <input name="contenu" id="Contenu" type="textarea" autoComplete="Contenu..." required />
+            <textarea name="contenu" id="Contenu"/>
             <button type="submit">Soummettre une information</button>
             </form>
         </div>
