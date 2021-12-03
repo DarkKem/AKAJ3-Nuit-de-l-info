@@ -24,25 +24,25 @@ const Index = async (req, res) => {
     }
 };
 const handleGET = async (req, res) => {
-    let datas = await db("boats").select()
+    let datas = await db("sauve").select()
     res.status(200).json({data: datas})
 
 }
 const handlePOST = async (req, res) => {
     let body = await JSON.parse(req.body)
-    const result = await db("boats").insert(body).returning('*');
+    const result = await db("sauve").insert(body).returning('*');
     res.status(200).json({data: result})
 }
 const handlePUT = async (req, res) => {
     let body = await JSON.parse(req.body)
-    const result = await db("boats").update(body).where('id', body.id).returning('*');
+    const result = await db("sauve").update(body).where('id', body.id).returning('*');
     res.status(200).json({data: result})
 
 }
 const handleDELETE = async (req, res) => {
     let body = await JSON.parse(req.body)
 
-    const result = await db("boats").delete().where('id', body.id);
+    const result = await db("sauve").delete().where('id', body.id);
 
     res.status(200).json({message: 'Well Deleted'})
 

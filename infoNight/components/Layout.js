@@ -3,7 +3,7 @@ import Meta from './Meta'
 import Footer from "./Navigation/Footer";
 import React, {useEffect, useState, Fragment} from "react";
 import {useRouter} from "next/router";
-
+import Image from "next/image"
 const Layout = ({children}) => {
 
 
