@@ -9,7 +9,7 @@ const Navbar = () => {
             {name: 'TEST', href: '/test', current: true},
             {name: 'Captcha', href: '/recaptcha', current:true},
             {name: 'Admin', href: '/backoffice', current:true},
-            
+            {name: 'Proposition ajout', href: '/formadd', current:true},
         ]
 
 
