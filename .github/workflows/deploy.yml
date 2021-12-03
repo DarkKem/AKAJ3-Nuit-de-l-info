@@ -17,7 +17,6 @@ jobs:
           HOSTNAME : ${{ secrets.HOSTNAME }}
           USERNAME : ${{ secrets.USERNAME }}
       run: |
-        chmod 400 AKAJ3.pem
         ssh -o StrictHostKeyChecking=no -i "$RSA_KEY" "$USERNAME"@"$HOSTNAME"'
           cd AKAJ3-Nuit-de-l-info
           git pull
