@@ -1,5 +1,6 @@
 import React from "react"
 import '../styles/globals.scss'
+import '../styles/backoffice.scss'
 import Layout from "../components/Layout";
 import {Router} from 'next/dist/client/router'
 import NProgress from 'nprogress';
