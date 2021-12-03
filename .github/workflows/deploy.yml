@@ -31,7 +31,7 @@ jobs:
             HOSTNAME : ${{ secrets.HOSTNAME  }}
         run: |
           chmod 400 AKAJ3.pem
-          scp -i AKAJ3.pem -r "infoNight" ubuntu@"$HOSTNAME":~/
+          scp -o StrictHostKeyChecking=no -i AKAJ3.pem -r "infoNight" ubuntu@"$HOSTNAME":~/
 
   run:
       runs-on: ubuntu-latest
@@ -44,7 +44,7 @@ jobs:
             HOSTNAME : ${{ secrets.HOSTNAME  }}
         run: |
           chmod 400 AKAJ3.pem
-          ssh -i "AKAJ3.pem" ubuntu@"$HOSTNAME"'
+          ssh -o StrictHostKeyChecking=no -i "AKAJ3.pem" ubuntu@"$HOSTNAME"'
             cd infoNight
             npm i
             pm2 start npm --name "next" -- start
