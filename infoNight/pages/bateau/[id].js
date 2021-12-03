@@ -6,7 +6,6 @@ import moment from "moment";
 const Index = ({data}) => {
     return (
         <div className={"divForElement"}>
-            {JSON.stringify(data)}
             <h1>{data.name} {data.type}</h1>
             <h2>{moment(data.date_creation).format("DD MM YYYY")}</h2>
             <p>{data.description}</p>
