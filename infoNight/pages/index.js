@@ -83,14 +83,14 @@ export default function Home({data}) {
                     <button type={"button"} onClick={handleClick}>Rechercher</button>
                 </div>
             </div>
-            <div className={"resultBlock"}>
-                {listDatas[type] && Object.keys(listDatas[type]).length > 0 ? Object.keys(listDatas[type]).map((elem, key) => (
-                    <div key={key} className={"divElemSearch"}>
+            {Object.keys(listDatas).length > 0 && listDatas[type]?.length > 0 && <div className={"resultBlock"}>
+                {listDatas[type] ? Object.keys(listDatas[type]).map((elem, key) => (
+                    <div key={key} className={""}>
                         {handleTypes(listDatas[type][elem])}
                     </div>
                 )) : null}
 
-            </div>
+            </div>}
 
 
         </div>

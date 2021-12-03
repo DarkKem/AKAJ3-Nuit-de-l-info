@@ -4,7 +4,7 @@ import {server} from "../config/index"
 
 export default function backoffice({data}) {
     async function traite(id) {
-            let request = `${server}api/backoffice`
+            let request = `${server}/api/backoffice`
             let serverRes = await fetch(request, {
                 method: "DELETE",
                 body: JSON.stringify({
@@ -39,7 +39,7 @@ export default function backoffice({data}) {
 };
 
 export const getServerSideProps = async (context) => {
-    const json = await fetch(`${server}api/backoffice`)
+    const json = await fetch(`${server}/api/backoffice`)
     let resJson= await json.json()
     return {props:{data:resJson.data}}
 }
