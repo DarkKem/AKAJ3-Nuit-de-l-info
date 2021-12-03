@@ -132,7 +132,8 @@ main {
     transition: all 0.2s ease-in-out;
     color: white;
   }
-  .divElemSearch:hover{
+
+  .divElemSearch:hover {
     background-color: steelblue;
 
 
@@ -210,8 +211,8 @@ form {
       font-weight: bold;
       cursor: pointer;
     }
-    button:hover
-    {
+
+    button:hover {
       background-color: darkorange;
       color: #28527A;
     }
@@ -219,3 +220,11 @@ form {
 
 }
 
+.divForElement {
+  background-color: white;
+  border-radius: 5px;
+  padding: 10px 15px;
+  width: 70%;
+  margin: 30px auto;
+
+}

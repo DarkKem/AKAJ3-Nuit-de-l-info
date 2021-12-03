@@ -1,14 +1,14 @@
 import React, {useEffect} from 'react';
 import Router from 'next/router'
 import {server} from "../../config";
+import moment from "moment";
 
 const Index = ({data}) => {
-    useEffect(() => {
-        console.log(data)
-    }, [data])
     return (
-        <div>
-            {JSON.stringify(data)}
+        <div className={"divForElement"}>
+            <h1>{data.name} {data.type}</h1>
+            <h2>{moment(data.date_creation).format("DD MM YYYY")}</h2>
+            <p>{data.description}</p>
         </div>
     );
 };
