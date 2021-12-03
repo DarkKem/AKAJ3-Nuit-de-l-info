@@ -16,7 +16,7 @@ jobs:
           HOSTNAME : ${{ secrets.HOSTNAME  }}
       run: |
         chmod 400 AKAJ3.pem
-        ssh -i AKAJ3.pem ubuntu@"$HOSTNAME" '
+        ssh -o StrictHostKeyChecking=no -i "AKAJ3.pem" ubuntu@"$HOSTNAME" '
           echo "test"
         '
 
