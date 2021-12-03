@@ -24,25 +24,25 @@ const Index = async (req, res) => {
     }
 };
 const handleGET = async (req, res) => {
-    let datas = await db("join_rescue_decoration").select()
+    let datas = await db("carrière").select()
     res.status(200).json({data: datas})
 
 }
 const handlePOST = async (req, res) => {
     let body = await JSON.parse(req.body)
-    const result = await db("join_rescue_decoration").insert(body).returning('*');
+    const result = await db("carrière").insert(body).returning('*');
     res.status(200).json({data: result})
 }
 const handlePUT = async (req, res) => {
     let body = await JSON.parse(req.body)
-    const result = await db("join_rescue_decoration").update(body).where('id', body.id).returning('*');
+    const result = await db("carrière").update(body).where('id', body.id).returning('*');
     res.status(200).json({data: result})
 
 }
 const handleDELETE = async (req, res) => {
     let body = await JSON.parse(req.body)
 
-    const result = await db("join_rescue_decoration").delete().where('id', body.id);
+    const result = await db("carrière").delete().where('id', body.id);
 
     res.status(200).json({message: 'Well Deleted'})
 
