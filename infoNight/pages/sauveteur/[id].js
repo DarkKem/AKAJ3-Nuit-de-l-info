@@ -1,15 +1,17 @@
 import React, {useEffect} from 'react';
 import Router from 'next/router'
 import {server} from "../../config";
+import moment from "moment";
 
 const Index = ({data}) => {
-    useEffect(() => {
-        console.log(data)
-    }, [data])
     return (
-        <div>
-            {JSON.stringify(data)}
-
+        <div className={"divForElement"}>
+            <h1>{data.name} {data.firstname} - {data.lieu_naissance}</h1>
+            <h2>{moment(data.day_of_birth).format("DD MM YYYY")}-{moment(data.day_of_death).format("DD MM YYYY")}</h2>
+            <p>{data.pere}</p>
+            <p>{data.mere}</p>
+            <p>{data.nb_sauvetage} sauvetages effectués</p>
+            <p>{data.text_autre}</p>
         </div>
     );
 };

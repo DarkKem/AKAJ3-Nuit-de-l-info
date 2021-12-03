@@ -3,11 +3,8 @@ import Router from 'next/router'
 import {server} from "../../config";
 
 const Index = ({data}) => {
-    useEffect(() => {
-        console.log(data)
-    }, [data])
     return (
-        <div>
+        <div className={"divForElement"}>
             {JSON.stringify(data)}
 
         </div>
