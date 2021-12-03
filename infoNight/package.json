@@ -9,9 +9,12 @@
   },
   "dependencies": {
     "autoprefixer": "^10.4.0",
+    "bcrypt": "^5.0.1",
+    "cookie": "^0.4.1",
     "imagemin-gifsicle": "^7.0.0",
     "imagemin-optipng": "^8.0.0",
     "imagemin-svgo": "^10.0.0",
+    "jsonwebtoken": "^8.5.1",
     "knex": "^0.95.14",
     "moment": "^2.29.1",
     "next": "12.0.4",
