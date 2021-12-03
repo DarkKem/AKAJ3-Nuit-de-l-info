@@ -16,9 +16,10 @@ const Index = async (req, res) => {
     }
 };
 const handleGET = async (req, res) => {
-    let body = req.body;
-    let params = req.params;
-    let datas = await db(params.type).select().where(body);
+    //?nom=""&prenom=""&date=""&type=""
+    let params = req.query;
+    console.log(params)
+    let datas = await db(params.type).select();
     res.status(200).json({data: datas})
 
 }
