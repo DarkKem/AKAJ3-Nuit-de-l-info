@@ -16,23 +16,24 @@ export default function backoffice({data}) {
             }           
     }
     return (
-        <div>
-            <h1>Admin</h1>
+        <div className={"admin"}>
+            <h2>Admin</h2>
+            <div className={"iframe-container"}>
+                <iframe style={{border: "0", overflow: "hidden"}}
+                    frameBorder="0" height="100%" width="70%"
+                    src="https://nuit-info-2021.toucantoco.com/embed.html?id=58aad1e4-62d5-439f-af08-cee332bc76b0&stage=staging">
+                </iframe>
+            </div>
+            <div className={"modification-container"}>
             {data.length>0 ? data.map((elem,key)=>(
-                <div key={key}>
-                    <h3>{elem.titre}</h3>
-                    <h4>{elem.categorie}</h4>
-                    <p>{elem.contenu}  </p>
-                    
-                    <button onClick={()=>{traite(elem.id)}}>Traité</button>
+                    <div key={key} className={"modification-content"}>
+                        <h3>{elem.titre}</h3>
+                        <h4>{elem.categorie}</h4>
+                        <p>{elem.contenu}  </p>
+                        <button onClick={()=>{traite(elem.id)}}>Traité</button>
                     </div>
-
             )):null}
-            <div style={{width:"100%", height:"250px"}}>
-            <iframe style={{border: "0", overflow: "hidden"}}
-             frameBorder="0" height="100%" width="100%"
-              src="https://nuit-info-2021.toucantoco.com/embed.html?id=58aad1e4-62d5-439f-af08-cee332bc76b0&stage=staging">
-              </iframe></div>
+            </div>
         </div>
     );
 };
