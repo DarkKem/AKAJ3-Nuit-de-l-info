@@ -1,0 +1,26 @@
+name: Deploy to AWS EC2
+
+on:
+  push:
+    branches: [ main ]
+  workflow_dispatch:
+  
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v2
+    - name: Launch front server
+      env:
+          RSA_KEY : ${{ secrets.RSA_KEY }}
+          HOSTNAME : ${{ secrets.HOSTNAME }}
+          USERNAME : ${{ secrets.USERNAME }}
+      run: |
+        ssh -o StrictHostKeyChecking=no -i "$RSA_KEY" "$USERNAME"@"$HOSTNAME"'
+          cd AKAJ3-Nuit-de-l-info
+          git pull
+          cd infoNight
+          npm i
+          pm2 start npm --name "next" -- start
+        '

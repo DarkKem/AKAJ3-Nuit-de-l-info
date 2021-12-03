@@ -1,0 +1,52 @@
+.admin {
+
+    h2 {
+        color: white;
+        text-align: center;
+        font-size: 35px;
+    }
+
+    .modification-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        background-color: #8AC4D0;
+        margin: auto;
+        width: 70%;
+        padding: 20px;
+        border-radius: 10px;
+
+        .modification-content {
+            padding: 25px;
+            border: gray solid 1px;
+            border-radius: 20px;
+            margin-bottom: 40px;
+            background-color: white;
+
+            h3 {
+                padding: 10px;
+                border-bottom: solid 2px gray;
+                text-transform: capitalize;
+                width: fit-content;
+            }
+
+            button {
+                width: 80px;
+                margin:0 auto;
+                display:block;
+            }
+        }
+    }
+
+    .iframe-container {
+        width:100%;
+        height:500px;
+        margin-top: 50px;
+        padding-bottom: 50px;
+        
+        iframe {
+            margin: auto;
+            display: block;
+        }
+    }
+}

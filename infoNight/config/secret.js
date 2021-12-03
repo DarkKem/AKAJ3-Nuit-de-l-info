@@ -1,0 +1,1 @@
+export const secret = "MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQCcSFKg4xhfV4pE6qOH/rBN3xMS"
