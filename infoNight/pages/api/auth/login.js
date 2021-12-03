@@ -11,8 +11,8 @@ const login = async (req, res) => {
             try {
                 const person = await db("user").select().where({username: req.body.username})
                 compare(req.body.password, person[0].password, (err, result) => {
-                    console.log(person)
-                    if (!err && result) {
+                    if (result && !err  ) {
+                        console.log('in')
                         const claims = {id: person[0].id, username: person[0].username};
                         const jwt = sign(claims, secret, {expiresIn: '24h'});
                         let dataUser = {
@@ -39,7 +39,7 @@ const login = async (req, res) => {
                         })
                     } else {
                         console.log(err)
-                        res.json({message: 'Ups, something went wrong!'})
+                        res.status(400).json({message: 'Ups, something went wrong!'})
                     }
                 });
             } catch (err) {
